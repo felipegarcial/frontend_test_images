@@ -6,7 +6,7 @@
     - [1. Clone the repository](#1-clone-the-repository)
     - [2. Enter the project](#2-enter-the-project)
     - [3. Instalar dependencias](#3-instalar-dependencias)
-    - [4. Correr proyecto](#4-correr-proyecto)
+    - [4. Correr proyecto (It's important to have running the Mocks server listening at: http://localhost:3100)](#4-correr-proyecto-its-important-to-have-running-the-mocks-server-listening-at-httplocalhost3100)
     - [5. Correr tests](#5-correr-tests)
   - [Pending:Change ImageCard desing in mobiles](#pendingchange-imagecard-desing-in-mobiles)
 
@@ -48,7 +48,7 @@ cd frontend_test_images
 ```bash
 npm install
 ```
-### 4. Correr proyecto
+### 4. Correr proyecto (It's important to have running the Mocks server listening at: http://localhost:3100)
 ```bash
 npm run dev
 ```
