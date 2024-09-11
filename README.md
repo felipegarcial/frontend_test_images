@@ -1,50 +1,63 @@
-# React + TypeScript + Vite
+# Table of Contents
+- [Table of Contents](#table-of-contents)
+  - [Project: Image Management with Vite, React, and TypeScript](#project-image-management-with-vite-react-and-typescript)
+    - [Implemented Features](#implemented-features)
+  - [Steps to Run the Project](#steps-to-run-the-project)
+    - [1. Clone the repository](#1-clone-the-repository)
+    - [2. Enter the project](#2-enter-the-project)
+    - [3. Instalar dependencias](#3-instalar-dependencias)
+    - [4. Correr proyecto](#4-correr-proyecto)
+  - [Pending:Change ImageCard desing in mobiles](#pendingchange-imagecard-desing-in-mobiles)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Project: Image Management with Vite, React, and TypeScript
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a web application created with **Vite**, **React**, and **TypeScript**. Its main objective is to display an image gallery that can be filtered, searched, and marked as favorites. Throughout the development of the project, several key features were implemented:
 
-## Expanding the ESLint configuration
+### Implemented Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. **Image Gallery**:
+   - Several image cards are displayed in a grid.
+   - Each card includes the image title, author, price, and number of "likes."
+   - Users can interact with the card to mark images as favorites.
 
-- Configure the top-level `parserOptions` property like this:
+2. **Search Functionality**:
+   - Users can search for images using the search box. The results are dynamically filtered as text is entered.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+3. **Likes System**:
+   - Users can "like" or "unlike" any image. The number of likes is dynamically updated on the image card.
+
+4. **Infinite Scroll**:
+   - An infinite scroll system was implemented to load more images as the user reaches the bottom of the page.
+
+5. **Unit Testing**:
+   - Unit and integration tests were included to validate the functionality of the main components using **Jest** and **React Testing Library**.
+
+## Steps to Run the Project
+
+### 1. Clone the repository 
+```bash
+git clone https://github.com/usuario/frontend_test_images.git
+```
+### 2. Enter the project
+```bash
+cd frontend_test_images
+```
+### 3. Instalar dependencias 
+```bash
+npm install
+```
+### 4. Correr proyecto
+```bash
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Pending:Change ImageCard desing in mobiles
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Although the application is functioning correctly, modify the design of the ImageCards for mobile view. Currently, the image cards have the same design for all resolutions, but the app is fully responsive. 
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- This task can be achieved with any of the following options:
+CSS with Media Queries: To hide or show components based on screen size.
+- A Custom Hook: To detect the window size and conditionally render different components in React.
+- matchMedia API: To detect media queries in JavaScript.
+
