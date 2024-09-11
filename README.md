@@ -7,6 +7,7 @@
     - [2. Enter the project](#2-enter-the-project)
     - [3. Instalar dependencias](#3-instalar-dependencias)
     - [4. Correr proyecto](#4-correr-proyecto)
+    - [5. Correr tests](#5-correr-tests)
   - [Pending:Change ImageCard desing in mobiles](#pendingchange-imagecard-desing-in-mobiles)
 
 
@@ -50,6 +51,10 @@ npm install
 ### 4. Correr proyecto
 ```bash
 npm run dev
+```
+### 5. Correr tests
+```bash
+npm run tests
 ```
 
 ## Pending:Change ImageCard desing in mobiles

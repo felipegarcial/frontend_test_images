@@ -20,12 +20,13 @@ const ImageCard: React.FC<Props> = ({ image, onLike }) => {
       </figure>
 
       <div className="likes-wrapper">
-        <div
+        <button
+          aria-label="like"
           className={`icon ${image.liked ? "icon-like" : "icon-no-like"}`}
           onClick={() => onLike(image.id)}
         >
           {image.liked ? "💚" : "👍"}
-        </div>
+        </button>
         <div className="likes-count">{image.likes_count}</div>
       </div>
 
